@@ -1,0 +1,21 @@
+{
+  "name": "grokking-algorithems-execise",
+  "version": "1.0.0",
+  "description": "do execise for the grokking-algorithmes",
+  "main": "''",
+  "scripts": {
+    "test": "jest test"
+  },
+  "keywords": [
+    "algorithm",
+    "execise"
+  ],
+  "author": "Addy Zhou",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
