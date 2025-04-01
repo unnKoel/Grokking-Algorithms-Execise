@@ -29,10 +29,13 @@ function max(arr) {
 algorithm, too. Can you come up with the base case and recursive
 case for binary search?
 
-arr.length / 2 is possible to be bigger than arr.length - 1?
+1. arr.length / 2 is possible to be bigger than arr.length - 1?
 prove:  x / 2 > x - 1, when x < 2, that x = 0 or 1;
         when x = 0, Math.floor(0/2) = 0 > x(0) - 1
         when x = 1, Math.floor(1/2) = 0 === x(1) -1
+
+2. why (start + end)/2 is the middle of the interval.
+prove: start + (end-start)/2 = end/2 + start/2 = (start+end)/2
 */
 function binarySearch(arr, target, start, end) {
   if (arr.length === 0) return -1;
