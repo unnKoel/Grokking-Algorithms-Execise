@@ -51,4 +51,31 @@ function binarySearch(arr, target, start, end) {
   if (target < arr[mid]) return binarySearch(arr, target, start, mid - 1);
 }
 
-export { sum, count, max, binarySearch };
+function quickSort(arr) {
+  if(arr.length < 2) return arr;
+  
+  const pivot = arr[0];
+  const bigger = [];
+  const smaller = [];
+  
+  for(let i = 1; i < arr.length; i++) {  // notice that i should start from 1 instead of 0, otherwise the error that maximum callstack size excessed accurs.
+    if(arr[i] > pivot) bigger.push(arr[i]);
+    if(arr[i] <= pivot) smaller.push(arr[i]);
+  }
+
+  return [...quickSort(smaller), pivot, ...quickSort(bigger)]
+}
+
+// 4.5 Printing the value of each element in an array.
+// answer: O(n)
+// 4.6 Doubling the value of each element in an array.
+// answer: O(n)
+// 4.7 Doubling the value of just the frst element in an array.
+// answer: O(1)
+/** 4.8 Creating a multiplication table with all the elements in the array. So
+if your array is [2, 3, 7, 8, 10], you frst multiply every element by 2,
+then multiply every element by 3, then by 7, and so on.
+answer: O(n^2)
+*/
+
+export { sum, count, max, binarySearch, quickSort };
